@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xleguisamoS6.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout Padding="10" Spacing="10">
+
+        <Label 
+            Text="SEMANA 6: CRUD ESTUDIANTES"
+            FontSize="20"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <!-- Encabezados de la Tabla -->
+        <Grid ColumnDefinitions="*, *, *, *" BackgroundColor="#E0E0E0" Padding="5">
+            <Label Text="Código" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="0"/>
+            <Label Text="Nombre" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="1"/>
+            <Label Text="Apellido" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="2"/>
+            <Label Text="Edad" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="3"/>
+        </Grid>
+
+        <!-- Filas de la Tabla -->
+        <ListView x:Name="listaEstudiantes" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="*, *, *, *" Padding="5">
+                            <Label Text="{Binding codigo}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0"/>
+                            <Label Text="{Binding nombre}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1"/>
+                            <Label Text="{Binding apellid}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2"/>
+                            <Label Text="{Binding edad}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="3"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
