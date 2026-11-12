@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xleguisamoS6.Views.vActualizarEliminar"
+             Title="vActualizarEliminar">
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label 
+            Text="Actualizar / Eliminar Estudiante"
+            FontSize="20"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+           
+            <Label Text="CÓDIGO"
+                   Grid.Row="0" Grid.Column="0"
+                   VerticalOptions="Center"/>
+            <Entry x:Name="txtCodigo"
+                   Placeholder="Código del estudiante"
+                   Keyboard="Numeric"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Nombre"
+                   Grid.Row="1" Grid.Column="0"
+                   VerticalOptions="Center"/>
+            <Entry x:Name="txtNombre"
+                   Placeholder="Ingresa el nombre"
+                   Grid.Row="1" Grid.Column="1"/>
+
+            
+            <Label Text="Apellido"
+                   Grid.Row="2" Grid.Column="0"
+                   VerticalOptions="Center"/>
+            <Entry x:Name="txtApellido"
+                   Placeholder="Ingresa el apellido"
+                   Grid.Row="2" Grid.Column="1"/>
+
+          
+            <Label Text="Edad"
+                   Grid.Row="3" Grid.Column="0"
+                   VerticalOptions="Center"/>
+            <Entry x:Name="txtEdad"
+                   Placeholder="Ingresa la edad"
+                   Keyboard="Numeric"
+                   Grid.Row="3" Grid.Column="1"/>
+        </Grid>
+
+        <Button x:Name="btnActualizar"
+                Text="Actualizar estudiante"
+                Clicked="btnActualizar_Clicked"/>
+
+        <Button x:Name="btnEliminar"
+                Text="Eliminar estudiante"
+                BackgroundColor="Red"
+                TextColor="White"
+                Clicked="btnEliminar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

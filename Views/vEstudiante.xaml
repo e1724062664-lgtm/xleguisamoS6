@@ -20,7 +20,8 @@
         </Grid>
 
         <!-- Filas de la Tabla -->
-        <ListView x:Name="listaEstudiantes" HasUnevenRows="True">
+        <ListView x:Name="listaEstudiantes" HasUnevenRows="True"
+                  ItemSelected="listaEstudiantes_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -34,6 +35,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Button x:Name="btnAgregar"
+                Text="Agregar Estudiante"
+                Clicked="btnAgregar_Clicked"/>
 
     </VerticalStackLayout>
 </ContentPage>
